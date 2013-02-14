@@ -16,20 +16,7 @@ Builds using Spring 3.1 with PostgreSQL 9.0 and Redis 2.2: deploys to springmvc-
     <nectar.plugins.rbac.groups.JobProxyGroupContainer plugin="nectar-rbac@3.4">
       <groups/>
     </nectar.plugins.rbac.groups.JobProxyGroupContainer>
-    <com.cloudbees.jenkins.plugins.PublicKey plugin="cloudbees-public-key@1.1"/>
-    <com.cloudbees.plugins.deployer.DeployNowJobProperty plugin="cloudbees-deployer-plugin@4.1">
-      <oneClickDeploy>false</oneClickDeploy>
-      <hosts>
-        <com.cloudbees.plugins.deployer.impl.cloudfoundry.HostImpl plugin="cloudfoundry-deploy-engine@1.1">
-          <targets class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
-            <c class="list"/>
-            <list reference="../c"/>
-          </targets>
-          <user>mqprichard@gmail.com</user>
-          <cloud>https://api.cloudfoundry.com</cloud>
-        </com.cloudbees.plugins.deployer.impl.cloudfoundry.HostImpl>
-      </hosts>
-    </com.cloudbees.plugins.deployer.DeployNowJobProperty>    
+    <com.cloudbees.jenkins.plugins.PublicKey plugin="cloudbees-public-key@1.1"/>  
   </properties>
   <scm class="hudson.plugins.git.GitSCM" plugin="git@1.1.26">
     <configVersion>2</configVersion>
@@ -92,48 +79,6 @@ Builds using Spring 3.1 with PostgreSQL 9.0 and Redis 2.2: deploys to springmvc-
   <globalSettingConfigId/>
   <reporters/>
   <publishers>
-    <com.cloudbees.plugins.deployer.DeployPublisher plugin="cloudbees-deployer-plugin@4.1">
-      <deployIfUnstable>false</deployIfUnstable>
-      <hosts>
-        <com.cloudbees.plugins.deployer.impl.cloudfoundry.HostImpl plugin="cloudfoundry-deploy-engine@1.1">
-          <targets class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
-            <c class="list">
-              <com.cloudbees.plugins.deployer.impl.cloudfoundry.TargetImpl>
-                <artifact class="com.cloudbees.plugins.deployer.sources.MavenArtifactDeploySource" plugin="cloudbees-deployer-plugin@4.1">
-                  <groupId>org.cloudfoundry.templates</groupId>
-                  <artifactId>springmvc31</artifactId>
-                  <type>war</type>
-                </artifact>
-                <url> ${applicationName}-${CLOUDBEES_ACCOUNT}.cloudfoundry.com </url>
-                <runtime>java</runtime>
-                <name>${applicationName}</name>
-                <memory>512</memory>
-                <instances>1</instances>
-                <framework>java_web</framework>
-                <command/>
-                <start>true</start>
-                <environmentVariables/>
-                <services>
-                  <com.cloudbees.plugins.deployer.impl.cloudfoundry.TargetImpl_-AppService>
-                    <name>postgresql-${applicationName}</name>
-                    <service>postgresql</service>
-                    <version>9.0</version>
-                  </com.cloudbees.plugins.deployer.impl.cloudfoundry.TargetImpl_-AppService>
-                  <com.cloudbees.plugins.deployer.impl.cloudfoundry.TargetImpl_-AppService>
-                    <name>redis-${applicationName}</name>
-                    <service>redis</service>
-                    <version>2.2</version>
-                  </com.cloudbees.plugins.deployer.impl.cloudfoundry.TargetImpl_-AppService>
-                </services>
-              </com.cloudbees.plugins.deployer.impl.cloudfoundry.TargetImpl>
-            </c>
-            <list reference="../c"/>
-          </targets>
-          <user>mqprichard@gmail.com</user></user>
-          <cloud>https://api.cloudfoundry.com</cloud>
-        </com.cloudbees.plugins.deployer.impl.cloudfoundry.HostImpl>
-      </hosts>
-    </com.cloudbees.plugins.deployer.DeployPublisher>
   </publishers>
   <buildWrappers/>
   <prebuilders>
