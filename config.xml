@@ -23,7 +23,7 @@
             <c class="list"/>
             <list reference="../c"/>
           </targets>
-          <user></user>
+          <user>mqprichard@gmail.com</user>
           <cloud>https://api.cloudfoundry.com</cloud>
         </com.cloudbees.plugins.deployer.impl.cloudfoundry.HostImpl>
       </hosts>
