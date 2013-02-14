@@ -13,27 +13,6 @@
 <groups/>
 </nectar.plugins.rbac.groups.JobProxyGroupContainer>
 <com.cloudbees.jenkins.plugins.PublicKey plugin="cloudbees-public-key@1.1"/>
-<com.cloudbees.plugins.deployer.DeployNowJobProperty plugin="cloudbees-deployer-plugin@4.1">
-<oneClickDeploy>false</oneClickDeploy>
-<hosts>
-<com.cloudbees.plugins.deployer.impl.cloudfoundry.HostImpl plugin="cloudfoundry-deploy-engine@1.1">
-<targets class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
-<c class="list"/>
-<list reference="../c"/>
-</targets>
-<user>mqprichard@gmail.com</user>
-<cloud>https://api.cloudfoundry.com</cloud>
-</com.cloudbees.plugins.deployer.impl.cloudfoundry.HostImpl>
-<com.cloudbees.plugins.deployer.impl.run.RunHostImpl>
-<targets class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
-<c class="list"/>
-<list reference="../c"/>
-</targets>
-<user>(jenkins)</user>
-<account>partnerdemo</account>
-</com.cloudbees.plugins.deployer.impl.run.RunHostImpl>
-</hosts>
-</com.cloudbees.plugins.deployer.DeployNowJobProperty>
 <com.gmail.ikeike443.PlayAutoTestJobProperty plugin="play-autotest-plugin@0.0.12"/>
 </properties>
 <scm class="hudson.plugins.git.GitSCM" plugin="git@1.1.26">
