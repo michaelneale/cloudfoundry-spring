@@ -1,6 +1,8 @@
 <maven2-moduleset plugin="maven-plugin@1.480.2.4">
 <actions/>
-<description/>
+<description>
+The Cloud Foundry/Spring Source springmvc-hibernate sample application (https://github.com/cloudfoundry-samples/springmvc-hibernate-template)
+</description>
 <logRotator>
 <daysToKeep>60</daysToKeep>
 <numToKeep>-1</numToKeep>
