@@ -5,6 +5,7 @@
     "description" : "SpringMVC+Hibernate sample: DEV@Cloud build to deploy to Cloud Foundry",
 
     "build-with-jenkins": {
+        "plugins": ["git","envinject"],
         "template": {
             "type": "https://raw.github.com/mqprichard/cloudfoundry-spring/master/config.xml"      
         }
