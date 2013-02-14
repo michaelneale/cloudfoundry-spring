@@ -82,7 +82,18 @@ The Cloud Foundry/Spring Source springmvc-hibernate sample application (https://
 <reporters/>
 <publishers/>
 <buildWrappers/>
-<prebuilders/>
+<prebuilders>
+<hudson.tasks.Shell>
+<command>
+#Create CLOUDBEES_ACCOUNT.properties with account name for Cloud Foundry Deployment Hostname #This will be injected into the build and used by the CloudBees Deployer plugin to specify a globally-unique name echo -n CLOUDBEES_ACCOUNT= > CLOUDBEES_ACCOUNT.properties echo `echo $JENKINS_URL | awk -F'.' '{print $1}' | sed 's/https:\/\///g'` >> CLOUDBEES_ACCOUNT.properties
+</command>
+</hudson.tasks.Shell>
+<EnvInjectBuilder plugin="envinject@1.80">
+<info>
+<propertiesFilePath>CLOUDBEES_ACCOUNT.properties</propertiesFilePath>
+</info>
+</EnvInjectBuilder>
+</prebuilders>
 <postbuilders/>
 <runPostStepsIfResult>
 <name>FAILURE</name>
