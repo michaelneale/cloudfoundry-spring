@@ -25,7 +25,7 @@ Builds using Spring 3.1 with PostgreSQL 9.0 and Redis 2.2: deploys to springmvc-
             <c class="list"/>
             <list reference="../c"/>
           </targets>
-          <user></user>
+          <user>mqprichard@gmail.com</user>
           <cloud>https://api.cloudfoundry.com</cloud>
         </com.cloudbees.plugins.deployer.impl.cloudfoundry.HostImpl>
       </hosts>
@@ -129,7 +129,7 @@ Builds using Spring 3.1 with PostgreSQL 9.0 and Redis 2.2: deploys to springmvc-
             </c>
             <list reference="../c"/>
           </targets>
-          <user></user></user>
+          <user>mqprichard@gmail.com</user></user>
           <cloud>https://api.cloudfoundry.com</cloud>
         </com.cloudbees.plugins.deployer.impl.cloudfoundry.HostImpl>
       </hosts>
