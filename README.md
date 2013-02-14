@@ -3,7 +3,7 @@ cloudfoundry-spring
 
 Clickstart example of a Spring/Hibernate application deployed to Cloud Foundry using CloudBees DEV@Cloud Deployer plugin.
 
-Source code can be found at the Cloud Foundry samples site on [GitHub](https://github.com/cloudfoundry-samples/springmvc-hibernate-template).
+Source code for the example is available on [GitHub](https://github.com/cloudfoundry-samples/springmvc-hibernate-template).
 
 The application is deployed using Deployment Hostname &lt;app_name&gt;-&lt;CLOUDBEES_ACCOUNT&gt;.cloudfoundry.com, and uses redis 2.2 and postgresql 9.0 Cloud Foundry services
 
