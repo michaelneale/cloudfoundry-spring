@@ -6,5 +6,13 @@
    "app-package-type": "war",
    "runtime": {
        "type": "tomcat"
+    },
+    "build-with-jenkins": {
+        "plugins" : ["git"],
+        "template": {
+            "type": "https://s3.amazonaws.com/cloudbees-downloads/clickstart/sample_jenkins_template.xml",
+            "options": {
+            }            
+        }
     }
 }
