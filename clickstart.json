@@ -6,9 +6,7 @@
 
     "build-with-jenkins": {
         "template": {
-            "type": "maven",
-            "options": {
-            }            
+            "type": "maven"      
         }
     }
 }
