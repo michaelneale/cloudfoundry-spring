@@ -24,7 +24,7 @@ Builds using Spring 3.1 with PostgreSQL 9.0 and Redis 2.2: deploys to springmvc-
       <hudson.plugins.git.UserRemoteConfig>
         <name/>
         <refspec/>
-        <url> ${repositoryUrl} </url>
+        <url> https://github.com/cloudfoundry-samples/springmvc-hibernate-template </url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
