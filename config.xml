@@ -20,9 +20,7 @@
 <hudson.plugins.git.UserRemoteConfig>
 <name/>
 <refspec/>
-<url>
-https://github.com/cloudfoundry-samples/springmvc-hibernate-template
-</url>
+<url>https://github.com/cloudfoundry-samples/springmvc-hibernate-template.git</url>
 </hudson.plugins.git.UserRemoteConfig>
 </userRemoteConfigs>
 <branches>
