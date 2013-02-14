@@ -2,13 +2,12 @@
     "id": "cloudfoundry-spring",
     "name": "Spring/Hibernate Deployment to Cloud Foundry",
     "source": "https://github.com/cloudfoundry-samples/springmvc-hibernate-template",
-    "description" : "PetClinic Grails sample: DEV@Cloud build to deploy to Cloud Foundry",
+    "description" : "SpringMVC+Hibernate sample: DEV@Cloud build to deploy to Cloud Foundry",
     "doc-url" : "https://github.com/mqprichard/cloudfoundry-grails/blob/master/README.md",
     "icon" : "https://d3ko533tu1ozfq.cloudfront.net/clickstart/hibernate_icon.png",
     "supported-by" : "community", 
 
     "build-with-jenkins": {
-            "plugins" : ["git", "envinject", "cloudbees-deployer-plugin"],
         "template": {
             "type": "https://github.com/mqprichard/cloudfoundry-grails/blob/master/config.xml"
         }
