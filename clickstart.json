@@ -1,13 +1,9 @@
 {
-   "id": "simple-war",
-   "name": "Simple - WAR",
-   "app-package": "https://s3.amazonaws.com/cloudbees-downloads/webapp.war",
-   "description": "Simple war deployed through clickstart",
-   "app-package-type": "war",
-   "runtime": {
-       "type": "tomcat"
-    },
-    "build-with-jenkins": {
+   "id": "cloudfoundry-spring",
+   "name": "Cloud Foundry Spring-Hibernate  Deployment",
+   "description": "Sample DEV@Cloud Spring example build with deployment to Cloud Foundry",
+   
+   "build-with-jenkins": {
         "plugins" : ["git"],
         "template": {
             "type": "https://s3.amazonaws.com/cloudbees-downloads/clickstart/sample_jenkins_template.xml",
