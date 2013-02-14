@@ -2,7 +2,7 @@
 <maven2-moduleset plugin="maven-plugin@1.480.2.4">
   <actions/>
   <description> 
-Cloud Foundry/Spring Source springmvc-hibernate sample application (https://github.com/cloudfoundry-samples/springmvc-hibernate-template) <br/> 
+Cloud Foundry springmvc-hibernate sample application (https://github.com/cloudfoundry-samples/springmvc-hibernate-template) <br/> 
 Builds using Spring 3.1 with PostgreSQL 9.0 and Redis 2.2: deploys to springmvc-hibernate-${CLOUDBEES_ACCOUNT}.cloudfoundry.com
   </description>
   <logRotator>
