@@ -8,7 +8,7 @@
     "supported-by" : "community", 
 
     "build-with-jenkins": {
-        "plugins" : ["git", "envinject", "grails", "cloudbees-deployer-plugin"]
+        "plugins" : ["git", "envinject", "grails", "cloudbees-deployer-plugin"],
         "template": {
             "type": "https://github.com/mqprichard/cloudfoundry-grails/blob/master/config.xml"
         }
