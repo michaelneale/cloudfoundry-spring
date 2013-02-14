@@ -1,13 +1,9 @@
 {
     "id": "cloudfoundry-spring",
     "name": "SpringMVC+Hibernate Deployment to Cloud Foundry",
-    "source": "https://github.com/cloudfoundry-samples/springmvc-hibernate-template",
+    "source": "https://github.com/cloudfoundry-samples/springmvc-hibernate-template.git",
     "description" : "SpringMVC+Hibernate sample: DEV@Cloud build to deploy to Cloud Foundry",
-    "app-package": "https://s3.amazonaws.com/cloudbees-downloads/webapp.war",
-    "app-package-type": "war",
-    "runtime": {
-        "type": "tomcat"
-    },
+
     "build-with-jenkins": {
         "template": {
             "type": "maven",
