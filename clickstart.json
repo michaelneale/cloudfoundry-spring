@@ -7,7 +7,7 @@
     "app-package-type": "war",
     "runtime": {
         "type": "tomcat"
-    }
+    },
     "build-with-jenkins": {
         "template": {
             "type": "maven",
