@@ -2,6 +2,6 @@ cloudfoundry-spring
 ===================
 
 Clickstart example of a Spring/Hibernate application deployed to Cloud Foundry using CloudBees DEV@Cloud Deployer plugin.
-The application is deployed using Deployment Hostname <application>-<CLOUDBEES_ACCOUNT>.cloudfoundry.com, and uses redis 2.2 and postgresql 9.0 Cloud Foundry services
+The application is deployed using Deployment Hostname &lt;app_name&gt;-&lt;CLOUDBEES_ACCOUNT&gt;.cloudfoundry.com, and uses redis 2.2 and postgresql 9.0 Cloud Foundry services
 
 <a href="https://grandcentral.cloudbees.com/?CB_clickstart=https://raw.github.com/mqprichard/cloudfoundry-spring/master/clickstart.json"><img src="https://d3ko533tu1ozfq.cloudfront.net/clickstart/deployInstantly.png"/></a>
