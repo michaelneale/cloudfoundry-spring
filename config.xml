@@ -1,9 +1,6 @@
 <maven2-moduleset plugin="maven-plugin@1.480.2.4">
 <actions/>
-<description>
-The Cloud Foundry/Spring Source springmvc-hibernate sample application (https://github.com/cloudfoundry-samples/springmvc-hibernate-template) <br/>
- Builds using Spring 3.1 with PostgreSQL 9.0 and Redis 2.2: deploys to springmvc-hibernate-${CLOUDBEES_ACCOUNT}.cloudfoundry.com
-</description>
+<description/>
 <logRotator>
 <daysToKeep>60</daysToKeep>
 <numToKeep>-1</numToKeep>
@@ -16,6 +13,27 @@ The Cloud Foundry/Spring Source springmvc-hibernate sample application (https://
 <groups/>
 </nectar.plugins.rbac.groups.JobProxyGroupContainer>
 <com.cloudbees.jenkins.plugins.PublicKey plugin="cloudbees-public-key@1.1"/>
+<com.cloudbees.plugins.deployer.DeployNowJobProperty plugin="cloudbees-deployer-plugin@4.1">
+<oneClickDeploy>false</oneClickDeploy>
+<hosts>
+<com.cloudbees.plugins.deployer.impl.cloudfoundry.HostImpl plugin="cloudfoundry-deploy-engine@1.1">
+<targets class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
+<c class="list"/>
+<list reference="../c"/>
+</targets>
+<user>mqprichard@gmail.com</user>
+<cloud>https://api.cloudfoundry.com</cloud>
+</com.cloudbees.plugins.deployer.impl.cloudfoundry.HostImpl>
+<com.cloudbees.plugins.deployer.impl.run.RunHostImpl>
+<targets class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
+<c class="list"/>
+<list reference="../c"/>
+</targets>
+<user>(jenkins)</user>
+<account>partnerdemo</account>
+</com.cloudbees.plugins.deployer.impl.run.RunHostImpl>
+</hosts>
+</com.cloudbees.plugins.deployer.DeployNowJobProperty>
 <com.gmail.ikeike443.PlayAutoTestJobProperty plugin="play-autotest-plugin@0.0.12"/>
 </properties>
 <scm class="hudson.plugins.git.GitSCM" plugin="git@1.1.26">
@@ -62,7 +80,11 @@ https://github.com/cloudfoundry-samples/springmvc-hibernate-template
 <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
 <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
 <jdk>(Default)</jdk>
-<triggers class="vector"/>
+<triggers class="vector">
+<com.cloudbees.jenkins.forge.ForgePushTrigger plugin="cloudbees-forge-plugin@1.1">
+<spec/>
+</com.cloudbees.jenkins.forge.ForgePushTrigger>
+</triggers>
 <concurrentBuild>false</concurrentBuild>
 <rootModule>
 <groupId>org.cloudfoundry.templates</groupId>
@@ -80,25 +102,13 @@ https://github.com/cloudfoundry-samples/springmvc-hibernate-template
 <settingConfigId/>
 <globalSettingConfigId/>
 <reporters/>
-<publishers>
-</publishers>
+<publishers/>
 <buildWrappers/>
-<prebuilders>
-<hudson.tasks.Shell>
-<command>
-#Create CLOUDBEES_ACCOUNT.properties with account name for Cloud Foundry Deployment Hostname #This will be injected into the build and used by the CloudBees Deployer plugin to specify a globally-unique name echo -n CLOUDBEES_ACCOUNT= > CLOUDBEES_ACCOUNT.properties echo `echo $JENKINS_URL | awk -F'.' '{print $1}' | sed 's/https:\/\///g'` >> CLOUDBEES_ACCOUNT.properties
-</command>
-</hudson.tasks.Shell>
-<EnvInjectBuilder plugin="envinject@1.80">
-<info>
-<propertiesFilePath>CLOUDBEES_ACCOUNT.properties</propertiesFilePath>
-</info>
-</EnvInjectBuilder>
-</prebuilders>
+<prebuilders/>
 <postbuilders/>
 <runPostStepsIfResult>
-<name>SUCCESS</name>
-<ordinal>0</ordinal>
-<color>BLUE</color>
+<name>FAILURE</name>
+<ordinal>2</ordinal>
+<color>RED</color>
 </runPostStepsIfResult>
 </maven2-moduleset>
