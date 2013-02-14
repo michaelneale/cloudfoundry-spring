@@ -35,7 +35,7 @@
       <hudson.plugins.git.UserRemoteConfig>
         <name/>
         <refspec/>
-        <url> {repositoryUrl} </url>
+        <url> ${repositoryUrl} </url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
