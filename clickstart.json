@@ -1,8 +1,8 @@
 {
     "id": "cloudfoundry-spring",
-    "name": "SpringMVC+Hibernate Example for Cloud Foundry Deployment",
+    "name": "Spring+Hibernate Example for Cloud Foundry Deployment",
     "source": "git://github.com/cloudfoundry-samples/springmvc-hibernate-template.git",
-    "description" : "SpringMVC+Hibernate sample: DEV@Cloud build for deployment to Cloud Foundry",
+    "description" : "Spring+Hibernate sample: DEV@Cloud build for deployment to Cloud Foundry",
 
     "build-with-jenkins": {
         "template": {
