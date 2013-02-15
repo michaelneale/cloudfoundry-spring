@@ -1,7 +1,7 @@
 cloudfoundry-spring
 ===================
 
-Clickstart example of a Spring/Hibernate application that can be deployed to Cloud Foundry using the CloudBees DEV@Cloud Deployer plugin.  The application and uses redis 2.2 and postgresql 9.0 Cloud Foundry services.
+Clickstart example of a Spring/Hibernate application that can be deployed to Cloud Foundry using the CloudBees DEV@Cloud Deployer plugin.  The application uses redis 2.2 and postgresql 9.0 services on Cloud Foundry.
 
 Source code for the example is available on [GitHub](https://github.com/cloudfoundry-samples/springmvc-hibernate-template).
 
