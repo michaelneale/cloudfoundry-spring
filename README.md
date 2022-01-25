@@ -1,4 +1,6 @@
 cloudfoundry-spring
+
+[![Git](https://app.soluble.cloud/api/v1/public/badges/ef3f7889-8b4c-4072-85f4-f0169b50202f.svg?orgId=451115019187)](https://app.soluble.cloud/repos/details/github.com/michaelneale/cloudfoundry-spring?orgId=451115019187)  
 ===================
 
 Clickstart example of a Spring/Hibernate application that can be deployed to Cloud Foundry using the CloudBees DEV@Cloud Deployer plugin.  The application uses redis 2.2 and postgresql 9.0 services on Cloud Foundry.
